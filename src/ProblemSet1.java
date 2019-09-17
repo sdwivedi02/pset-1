@@ -22,7 +22,7 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
          var area = (8.5*11)*645.16;
-         System.out.println("\n"+area+" square millimeters");
+         System.out.println("\n"+area+" square millimeters.");
 
 
 
@@ -32,7 +32,7 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
          var perimeter = ((2*8.5)+(2*11))*2.54;
-         System.out.println("\n"+perimeter+" centimeters");
+         System.out.println("\n"+perimeter+" centimeters.");
 
 
         /*
@@ -41,7 +41,8 @@ public class ProblemSet1 {
          * What is the length of the diagonal (in inches) between two corners on an 8.5-
          * by-11-inch sheet of paper?
          */
-
+         var diagonal = Math.sqrt((8.5*8.5)+(11*11));
+         System.out.println("\n"+diagonal+" inches.");
 
 
         /*
