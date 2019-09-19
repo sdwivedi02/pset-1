@@ -52,6 +52,10 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
 
+        final double HOMEWORK = 0.15;
+        final double QUIZ = 0.35;
+        final double TEST = 0.5;
+
         int homework1 = 88;
         int homework2 = 91;
         int homework3 = 0;
@@ -61,6 +65,17 @@ public class ProblemSet1 {
         int test1 = 74;
         int test2 = 87;
         int test3 = 82;
+
+        double weightedhomework1 = homework1 * HOMEWORK;
+        double weightedhomework2 = homework2 * HOMEWORK;
+        double weightedhomework3 = homework3 * HOMEWORK;
+        double weightedquiz1 = quiz1 * QUIZ;
+        double weightedquiz2 = quiz2 * QUIZ;
+        double weightedquiz3 = quiz3 * QUIZ;
+        double weightedtest1 = test1 * TEST;
+        double weightedtest2 = test2 * TEST;
+        double weightedtest3 = test3 * TEST;
+
 
 
 
