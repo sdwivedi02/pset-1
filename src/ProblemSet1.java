@@ -76,6 +76,14 @@ public class ProblemSet1 {
         double weightedtest2 = test2 * TEST;
         double weightedtest3 = test3 * TEST;
 
+        var homeworkAverage = ((weightedhomework1+weightedhomework2+weightedhomework3)/3);
+        var quizAverage = ((weightedquiz1+weightedquiz2+weightedquiz3)/3);
+        var testAverage = ((weightedtest1+weightedtest2+weightedtest3)/3);
+
+        var grade = homeworkAverage+quizAverage+testAverage;
+
+        System.out.println("\n"+grade);
+
 
 
 
@@ -86,6 +94,20 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
+         var hourlyWage = 12.50;
+
+         var monday = hourlyWage*7.5;
+         var tuesday = hourlyWage*8;
+         var wednesday = hourlyWage*10.5;
+         var thursday = hourlyWage*9.5;
+         var friday = hourlyWage*6;
+         var saturday = hourlyWage*11.5;
+         var sunday = hourlyWage*0;
+
+         var total = monday+tuesday+wednesday+thursday+friday+saturday+sunday;
+
+         System.out.println("\n"+ total);
+
 
 
         /*
@@ -94,6 +116,18 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
+         var salary = 117000/24;
+         var federalIncomeTaxRate = 0.24;
+         var stateIncomeTaxRate = 0.0637;
+         var pretaxContributionRate = 0.07;
+
+         var pretaxContribution = salary * pretaxContributionRate;
+         var federalContribution = pretaxContribution * federalIncomeTaxRate;
+         var stateContribution = pretaxContribution * stateIncomeTaxRate;
+
+         var takeHomePay = salary-(pretaxContribution+federalContribution+stateContribution);
+
+         System.out.println("\n"+takeHomePay);
 
 
         /*
