@@ -137,7 +137,14 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
+         var students = 273;
+         var teachers = 28;
+         var busCapacity = 54;
 
+         var numberOfBuses = Math.ceil((273+28)/54);
+         var peopleOnLastBus = (273/28)%54;
+
+         System.out.println("\n"+numberOfBuses+" are needed, with "+ peopleOnLastBus + "on the last bus.");
 
         /*
          * Exercise 8.
@@ -145,7 +152,17 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
+         var boardLength = 48;
+         var boardWidth = 24;
+         var holeDiameter = 6;
+         var holeRadius = diameter/2;
 
+         var boardArea = boardLength * boardWidth;
+         var holeArea = Math.PI*(holeRadius*holeRadius);
+
+         var totalArea = boardArea-holeArea;
+
+         System.out.println("\n"+totalArea+"square inches.");
 
         /*
          * Exercise 9.
@@ -161,6 +178,12 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
+         var temperature = 38;
+         var windSpeed = 14;
+
+         var windChill = (35.74+ (0.6215*temperature))+((0.4275*temperature)-35.75))*Math.pow(windSpeed, 0.16);
+
+         System.out.println("\n"+ windchill + " degrees." + "\n");
 
 
     }
