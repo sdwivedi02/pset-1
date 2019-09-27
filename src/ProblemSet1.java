@@ -191,7 +191,7 @@ public class ProblemSet1 {
          double windChill = (35.74+ (0.6215*temperature))+((0.4275*temperature)-35.75) * Math.pow(windSpeed, 0.16);
          String windChillRounded = String.format("%.1f", windChill);
 
-         System.out.println("\n"+ windChillRounded + " degrees.");
+         System.out.println("\n"+ windChillRounded + " degrees. \n");
 
 
     }
