@@ -21,8 +21,10 @@ public class ProblemSet1 {
          *
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-         var area = (8.5*11)*645.16;
-         System.out.println("\n"+area+" square millimeters.");
+         double area = (8.5*11)*645.16;
+         String areaRounded = String.format("%,.2f", area);
+
+         System.out.println("\n"+areaRounded+" square millimeters.");
 
 
 
@@ -31,7 +33,7 @@ public class ProblemSet1 {
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-         var perimeter = ((2*8.5)+(2*11))*2.54;
+         double perimeter = ((2*8.5)+(2*11))*2.54;
          System.out.println("\n"+perimeter+" centimeters.");
 
 
@@ -41,8 +43,9 @@ public class ProblemSet1 {
          * What is the length of the diagonal (in inches) between two corners on an 8.5-
          * by-11-inch sheet of paper?
          */
-         var diagonal = Math.sqrt((8.5*8.5)+(11*11));
-         System.out.println("\n"+diagonal+" inches.");
+         double diagonal = Math.sqrt((8.5*8.5)+(11*11));
+         String diagonalRounded = String.format("%.2f", diagonal);
+         System.out.println("\n"+diagonalRounded+" inches.");
 
 
         /*
@@ -76,13 +79,14 @@ public class ProblemSet1 {
         double weightedtest2 = test2 * TEST;
         double weightedtest3 = test3 * TEST;
 
-        var homeworkAverage = ((weightedhomework1+weightedhomework2+weightedhomework3)/3);
-        var quizAverage = ((weightedquiz1+weightedquiz2+weightedquiz3)/3);
-        var testAverage = ((weightedtest1+weightedtest2+weightedtest3)/3);
+        double homeworkAverage = ((weightedhomework1+weightedhomework2+weightedhomework3)/3);
+        double quizAverage = ((weightedquiz1+weightedquiz2+weightedquiz3)/3);
+        double testAverage = ((weightedtest1+weightedtest2+weightedtest3)/3);
 
-        var grade = homeworkAverage+quizAverage+testAverage;
+        double grade = homeworkAverage+quizAverage+testAverage;
+        String gradeRounded = String.format("%,.2f%%", grade);
 
-        System.out.println("\n"+grade);
+        System.out.println("\n"+gradeRounded+".");
 
 
 
@@ -94,19 +98,20 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
-         var hourlyWage = 12.50;
+         double hourlyWage = 12.50;
 
-         var monday = hourlyWage*7.5;
-         var tuesday = hourlyWage*8;
-         var wednesday = hourlyWage*10.5;
-         var thursday = hourlyWage*9.5;
-         var friday = hourlyWage*6;
-         var saturday = hourlyWage*11.5;
-         var sunday = hourlyWage*0;
+         double monday = hourlyWage*7.5;
+         double tuesday = hourlyWage*8;
+         double wednesday = hourlyWage*10.5;
+         double thursday = hourlyWage*9.5;
+         double friday = hourlyWage*6;
+         double saturday = hourlyWage*11.5;
+         double sunday = hourlyWage*0;
 
-         var total = monday+tuesday+wednesday+thursday+friday+saturday+sunday;
+         double total = monday+tuesday+wednesday+thursday+friday+saturday+sunday;
+         String totalRounded = String.format("$%.2f", total);
 
-         System.out.println("\n"+ total);
+         System.out.println("\n"+ totalRounded + ".");
 
 
 
@@ -116,18 +121,19 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-         var salary = 117000/24;
-         var federalIncomeTaxRate = 0.24;
-         var stateIncomeTaxRate = 0.0637;
-         var pretaxContributionRate = 0.07;
+         double salary = 117000/24;
+         double federalIncomeTaxRate = 0.24;
+         double stateIncomeTaxRate = 0.0637;
+         double pretaxContributionRate = 0.07;
 
-         var pretaxContribution = salary * pretaxContributionRate;
-         var federalContribution = pretaxContribution * federalIncomeTaxRate;
-         var stateContribution = pretaxContribution * stateIncomeTaxRate;
+         double pretaxContribution = salary * pretaxContributionRate;
+         double federalContribution = pretaxContribution * federalIncomeTaxRate;
+         double stateContribution = pretaxContribution * stateIncomeTaxRate;
 
-         var takeHomePay = salary-(pretaxContribution+federalContribution+stateContribution);
+         double takeHomePay = salary-(pretaxContribution+federalContribution+stateContribution);
+         String takeHomePayRounded = String.format("$%,.2f", takeHomePay);
 
-         System.out.println("\n"+takeHomePay);
+         System.out.println("\n"+takeHomePayRounded + ".");
 
 
         /*
@@ -137,14 +143,14 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
-         var students = 273;
-         var teachers = 28;
-         var busCapacity = 54;
+         int students = 273;
+         int teachers = 28;
+         int busCapacity = 54;
 
-         var numberOfBuses = Math.ceil((273+28)/54);
-         var peopleOnLastBus = (273/28)%54;
+         int numberOfBuses = (students+teachers) / busCapacity + 1;
+         int peopleOnLastBus = (students + teachers) % busCapacity;
 
-         System.out.println("\n"+numberOfBuses+" are needed, with "+ peopleOnLastBus + "on the last bus.");
+         System.out.println("\n"+numberOfBuses+" buses are needed, with "+ peopleOnLastBus + " passengers on the last bus.");
 
         /*
          * Exercise 8.
@@ -152,17 +158,18 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-         var boardLength = 48;
-         var boardWidth = 24;
-         var holeDiameter = 6;
-         var holeRadius = diameter/2;
+         int boardLength = 48;
+         int boardWidth = 24;
+         int holeDiameter = 6;
+         int holeRadius = holeDiameter/2;
 
-         var boardArea = boardLength * boardWidth;
-         var holeArea = Math.PI*(holeRadius*holeRadius);
+         int boardArea = boardLength * boardWidth;
+         double holeArea = Math.PI*(holeRadius*holeRadius);
 
-         var totalArea = boardArea-holeArea;
+         double totalArea = boardArea-holeArea;
+         String totalAreaRounded = String.format("%,.2f", totalArea);
 
-         System.out.println("\n"+totalArea+"square inches.");
+         System.out.println("\n"+totalAreaRounded+" square inches.");
 
         /*
          * Exercise 9.
@@ -178,12 +185,13 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
-         var temperature = 38;
-         var windSpeed = 14;
+         int temperature = 38;
+         int windSpeed = 14;
 
-         var windChill = (35.74+ (0.6215*temperature))+((0.4275*temperature)-35.75))*Math.pow(windSpeed, 0.16);
+         double windChill = (35.74+ (0.6215*temperature))+((0.4275*temperature)-35.75) * Math.pow(windSpeed, 0.16);
+         String windChillRounded = String.format("%.1f", windChill);
 
-         System.out.println("\n"+ windchill + " degrees." + "\n");
+         System.out.println("\n"+ windChillRounded + " degrees.");
 
 
     }
