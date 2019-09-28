@@ -177,7 +177,23 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
+         int year = 0;
+         boolean isLeapYear = false;
 
+         year = 2020;
+         isLeapYear=((year % 4)=0)&&(((year % 100)!=0) || ((year % 400)=0));
+
+         System.out.println("\n" + year + " is a leap year..." + isLeapYear);
+
+         year = 2100;
+         isLeapYear=((year % 4)=0)&&(((year % 100)!=0) || ((year % 400)=0));
+
+         System.out.println("\n" + year + " is a leap year..." + isLeapYear);
+
+         year = 2400;
+         isLeapYear = (year % 4=0)&&((year % 100!=0) || (year % 400=0));
+
+         System.out.println("\n" + year + " is a leap year..." + isLeapYear);
 
         /*
          * Exercise 10.
