@@ -127,10 +127,14 @@ public class ProblemSet1 {
          double pretaxContributionRate = 0.07;
 
          double pretaxContribution = salary * pretaxContributionRate;
-         double federalContribution = pretaxContribution * federalIncomeTaxRate;
-         double stateContribution = pretaxContribution * stateIncomeTaxRate;
+         double pretaxSalary = salary - pretaxContribution;
 
-         double takeHomePay = salary-(pretaxContribution+federalContribution+stateContribution);
+         double federalContribution = pretaxSalary * federalIncomeTaxRate;
+         double federalTaxSalary = pretaxSalary - federalContribution;
+
+         double stateContribution = federalTaxSalary * stateIncomeTaxRate;
+
+         double takeHomePay = federalTaxSalary - stateContribution;
          String takeHomePayRounded = String.format("$%,.2f", takeHomePay);
 
          System.out.println("\n"+takeHomePayRounded + ".");
@@ -181,17 +185,17 @@ public class ProblemSet1 {
          boolean isLeapYear = false;
 
          year = 2020;
-         isLeapYear=((year % 4)=0)&&(((year % 100)!=0) || ((year % 400)=0));
+         isLeapYear=((year % 4)==0)&&(((year % 100)!=0) || ((year % 400)==0));
 
          System.out.println("\n" + year + " is a leap year..." + isLeapYear);
 
          year = 2100;
-         isLeapYear=((year % 4)=0)&&(((year % 100)!=0) || ((year % 400)=0));
+         isLeapYear=((year % 4)==0)&&(((year % 100)!=0) || ((year % 400)==0));
 
          System.out.println("\n" + year + " is a leap year..." + isLeapYear);
 
          year = 2400;
-         isLeapYear = (year % 4=0)&&((year % 100!=0) || (year % 400=0));
+         isLeapYear = (year % 4==0)&&((year % 100!=0) || (year % 400==0));
 
          System.out.println("\n" + year + " is a leap year..." + isLeapYear);
 
